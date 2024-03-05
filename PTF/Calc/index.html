@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div id="pnl">
+        <input type="text" id="resultado" name="resultado" readonly > 
+    </div>
+    <div id="bd">
+        <button class="nmb" onclick="adicionarValor('1')">1</button>
+        <button class="nmb" onclick="adicionarValor('2')">2</button>
+        <button class="nmb" onclick="adicionarValor('3')">3</button><br>
+        <button class="nmb" onclick="adicionarValor('4')">4</button>
+        <button class="nmb" onclick="adicionarValor('5')">5</button>
+        <button class="nmb" onclick="adicionarValor('6')">6</button><br>
+        <button class="nmb" onclick="adicionarValor('7')">7</button>
+        <button class="nmb" onclick="adicionarValor('8')">8</button>
+        <button class="nmb" onclick="adicionarValor('9')">9</button><br>
+    </div>
+    <div id="op">
+        <button class="opr" onclick="adicionarValor('+')">+</button>
+        <button class="opr" onclick="adicionarValor('-')">-</button>
+        <button class="opr" onclick="adicionarValor('%')">%</button><br>
+        <button class="opr" onclick="adicionarValor('/')">/</button>
+        <button class="opr" onclick="adicionarValor('*')">*</button>
+        <button class="opr" onclick="apagarUltimo()">Delete</button>
+        <button type="button" class="opr" onclick="calcular()">=</button>
+    </div>
+    <div>
+        <button type="button" class="oprr" onclick="limpar()">Clear</button>
+    </div>
+    <script src="index.js"></script>
+    <script>
+        function adicionarValor(valor) {
+            document.getElementById('resultado').value += valor;
+        }
+
+        function apagarUltimo() {
+            var valorAtual = document.getElementById('resultado').value;
+            document.getElementById('resultado').value = valorAtual.slice(0, -1);
+        }
+
+        function calcular() {
+            var expressao = document.getElementById('resultado').value;
+            var resultado = eval(expressao); // Aqui estamos usando eval() para calcular a expressão
+            document.getElementById('resultado').value = resultado;
+        }
+
+        function limpar() {
+            document.getElementById('resultado').value = '';
+        }
+    </script>
+</body>
+</html>

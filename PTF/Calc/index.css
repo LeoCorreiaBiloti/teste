@@ -1,0 +1,36 @@
+.nmb{
+    color: rgb(255, 255, 255);
+    background-color: rgb(71, 76, 80);
+    width: 66.6px;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+.opr{
+    color: white;
+    background-color: orangered;
+    border-color: rgb(0, 0, 0);
+    width: 66.6px;
+    border-radius: 10px;
+    height: 30px;
+    font-size: 18px;
+}
+#resultado {
+    width: 200px;
+    border-radius: 10px;
+    height: 30px;
+    font-size: 18px;
+    text-align: right;
+  }
+  .oprr{
+    color: white;
+    background-color: rgb(211, 3, 3);
+    border-color: rgb(0, 0, 0);
+    width: 66.6px;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+body{
+    padding: 30%;
+}
